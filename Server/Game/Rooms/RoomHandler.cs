@@ -134,7 +134,7 @@ namespace Snowlight.Game.Rooms
             }
 
             ServerMessage PubRoomData = new ServerMessage(OpcodesOut.ROOM_PUBLIC_MODELDATA);
-            PubRoomData.AppendUInt32(27); // Unknown.
+            PubRoomData.AppendUInt32(RoomId);
             PubRoomData.AppendStringWithBreak(Info.SWFs);
             PubRoomData.AppendUInt32(Info.Id);
             Session.SendData(PubRoomData);
